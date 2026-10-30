@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Концепты сайтов</title>
+<style>
+:root{--bg:#f4f1ea;--ink:#1b1a17;--mute:#6b665c;--line:#d9d3c6}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,"PingFang SC","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;padding:48px 20px 64px}
+.wrap{max-width:1180px;margin:0 auto}
+h1{font:600 clamp(28px,5vw,44px)/1.1 Georgia,"Times New Roman",serif;margin:0 0 10px;letter-spacing:-.01em}
+.sub{color:var(--mute);max-width:640px;margin:0 0 40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:28px}
+a.card{display:block;color:inherit;text-decoration:none}
+.shot{aspect-ratio:9/19.5;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#ddd;box-shadow:0 10px 30px rgba(0,0,0,.08);transition:transform .25s ease}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+a.card:hover .shot,a.card:focus-visible .shot{transform:translateY(-4px)}
+a.card:focus-visible{outline:2px solid var(--ink);outline-offset:6px;border-radius:24px}
+h2{font-size:17px;margin:14px 0 2px}
+p{margin:0;color:var(--mute);font-size:14px}
+footer{margin-top:48px;color:var(--mute);font-size:13px}
+@media (prefers-reduced-motion:reduce){.shot{transition:none}}
+</style></head><body><main class="wrap">
+<h1>Концепты сайтов</h1>
+<p class="sub">Пять одностраничных сайтов в разных стилях. Откройте на телефоне — все сделаны в первую очередь под мобильные, без сторонних сервисов, быстро грузятся.</p>
+<div class="grid">
+<a class="card" href="https://handfooll.github.io/coffee-arte-demo/"><div class="shot"><img src="thumbs/coffee-arte.webp" alt="Coffee Arte, первый экран" loading="lazy"></div><h2>Coffee Arte</h2><p>Тёмный редакционный стиль, анимация при прокрутке</p></a>
+<a class="card" href="bai-kazan-chaikhana/"><div class="shot"><img src="thumbs/bai-kazan-chaikhana.webp" alt="Бай казан, первый экран" loading="lazy"></div><h2>Бай казан</h2><p>Тёплый национальный стиль, крупная антиква</p></a>
+<a class="card" href="capito/"><div class="shot"><img src="thumbs/capito.webp" alt="Capito, первый экран" loading="lazy"></div><h2>Capito</h2><p>Светлый и мягкий, один цвет на кремовом</p></a>
+<a class="card" href="rodem-bakery/"><div class="shot"><img src="thumbs/rodem-bakery.webp" alt="Rodem, первый экран" loading="lazy"></div><h2>Rodem</h2><p>Смелый и яркий, фильтр меню, карусель</p></a>
+<a class="card" href="bahchai/"><div class="shot"><img src="thumbs/bahchai.webp" alt="Бахчай, первый экран" loading="lazy"></div><h2>Бахчай</h2><p>Тёмный кинематографичный, горизонтальная сцена</p></a>
+</div>
+<footer>Демо-концепты. Фото частично взяты как временные иллюстрации.</footer>
+</main></body></html>

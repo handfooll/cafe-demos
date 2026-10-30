@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0b1512">
+<title>Бахчай — ресто-бар в Бишкеке, открыто до 03:00</title>
+<meta name="description" content="Бахчай — ресто-бар на Туголбай Ата, 30/1 в Бишкеке. Шашлык, кухня на большое меню, каждый день с 10:00 до 03:00.">
+<!-- photos: stock placeholders, replace with owner's photos before launch -->
+<style>
+@font-face{font-family:Osw;font-weight:600;font-display:swap;src:url(fonts/oswald-cyrillic-600-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:Osw;font-weight:600;font-display:swap;src:url(fonts/oswald-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:Man;font-weight:400;font-display:swap;src:url(fonts/manrope-cyrillic-400-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:Man;font-weight:400;font-display:swap;src:url(fonts/manrope-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:Man;font-weight:500;font-display:swap;src:url(fonts/manrope-cyrillic-500-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:Man;font-weight:500;font-display:swap;src:url(fonts/manrope-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+2000-206F,U+20AC,U+2122,U+2212}
+:root{--bg:#0b1512;--bg2:#101e19;--ink:#e3ebe3;--mute:#9bada2;--line:rgba(227,235,227,.18);--ember:#f2a65a;--ease:cubic-bezier(.22,1,.36,1);--pad:clamp(20px,5vw,72px);color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+html{background:var(--bg)}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 Man,system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;filter:brightness(.8) contrast(1.2)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+.d{font-family:Osw,Impact,sans-serif;font-weight:600;text-transform:uppercase;line-height:.95;letter-spacing:.01em}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* header: wordmark hides on scroll down, one light button stays */
+.hd{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:calc(18px + env(safe-area-inset-top,0px)) var(--pad) 0;pointer-events:none}
+.hd>*{pointer-events:auto}
+.mark{font-size:22px;text-decoration:none;mix-blend-mode:difference;color:#fff;transition:transform .6s var(--ease),opacity .6s}
+.hd.hide .mark{transform:translateY(-140%);opacity:0}
+.btn{display:inline-block;background:var(--ink);color:var(--bg);font:500 14px/1 Man,sans-serif;padding:13px 18px;border-radius:3px;text-decoration:none;transition:background .2s ease-in,transform .2s}
+.btn:hover{background:#fff}
+.btn.ghost{background:none;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.btn.ghost:hover{background:rgba(227,235,227,.08)}
+
+/* hero */
+.hero{height:200svh;position:relative}
+.hero .st{position:sticky;top:0;height:100svh;overflow:hidden}
+.hero .bg{position:absolute;inset:-6% 0;will-change:transform}
+.hero .bg img{width:100%;height:100%;object-fit:cover}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(11,21,18,.45),rgba(11,21,18,.1) 40%,rgba(11,21,18,.75));opacity:1}
+.hero h1{position:absolute;left:0;right:0;bottom:12svh;text-align:center;font-size:min(36svh,22vw);line-height:.88;will-change:transform,filter,opacity}
+.hero h1 br{display:none}
+.hero .meta{position:absolute;left:var(--pad);right:var(--pad);bottom:calc(3.5svh + env(safe-area-inset-bottom,0px));display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--ink)}
+.hero .meta span:last-child{color:var(--mute)}
+@media(max-width:700px){.hero h1{font-size:min(52vw,26svh);line-height:1.08;bottom:15svh}.hero h1 br{display:block}}
+
+/* reveals */
+.js .rv{opacity:0;transform:translateY(46px);transition:opacity 3s var(--ease),transform 3s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.25s}.js .rv.d2{transition-delay:.5s}
+
+/* manifesto */
+.man{padding:clamp(110px,22vh,240px) var(--pad);max-width:1400px;margin:0 auto}
+.man p{font-size:clamp(28px,5.2vw,76px);line-height:1.12;max-width:17em}
+.man p b{font:inherit;color:var(--mute);font-weight:400}
+.man .d{display:block}
+
+/* pinned horizontal scene */
+.scene{position:relative}
+.scene .st{padding:0 0 8vh}
+.scene h2{padding:0 var(--pad) 28px;font-size:14px;letter-spacing:.14em;color:var(--mute);font-family:Man,sans-serif;font-weight:500;text-transform:uppercase}
+.track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--pad);scrollbar-width:none;overscroll-behavior-x:contain}
+.track::-webkit-scrollbar{display:none}
+.card{flex:0 0 78vw;max-width:440px;scroll-snap-align:center}
+.card .im{aspect-ratio:4/5;overflow:hidden;background:var(--bg2)}
+.card .im img{width:100%;height:100%;object-fit:cover}
+.card .n{display:block;margin-top:16px;font-size:13px;color:var(--mute);letter-spacing:.1em}
+.card h3{font-size:clamp(48px,14vw,84px);margin:4px 0 8px}
+.card p{color:var(--mute);font-size:16px;max-width:28em}
+.hint{padding:18px var(--pad) 0;font-size:13px;color:var(--mute)}
+.bar{display:none}
+@media(min-width:900px) and (prefers-reduced-motion:no-preference){
+ .scene .st{position:sticky;top:0;height:100svh;overflow:hidden;padding:0;display:flex;flex-direction:column;justify-content:center}
+ .scene h2{position:absolute;top:calc(22px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);padding:0;margin:0}
+ .track{overflow:visible;scroll-snap-type:none;gap:5vw;padding:0 8vw;will-change:transform;width:max-content}
+ .card{flex:0 0 52vw;max-width:none;scroll-snap-align:none;display:grid;grid-template-columns:1fr;position:relative}
+ .card .im{aspect-ratio:auto;height:58svh}
+ .card .im img{width:calc(100% + 8vw);max-width:none;height:100%;margin-left:-4vw;will-change:transform}
+ .card .tx{display:grid;grid-template-columns:auto 1fr;gap:0 24px;align-items:end;margin-top:2.2svh}
+ .card .n{grid-row:1/3;margin:0;align-self:start;padding-top:1.2svh}
+ .card h3{font-size:min(13svh,9vw);margin:0}
+ .card p{margin:6px 0 0}
+ .hint{display:none}
+ .bar{display:block;position:absolute;left:8vw;right:8vw;bottom:5svh;height:1px;background:var(--line)}
+ .bar i{display:block;height:1px;background:var(--ink);transform-origin:left;transform:scaleX(0)}
+}
+
+/* menu */
+.menu{padding:clamp(90px,16vh,200px) var(--pad);max-width:1400px;margin:0 auto}
+.menu h2{font-size:clamp(56px,11vw,150px);margin-bottom:12px}
+.menu .lead{color:var(--mute);max-width:32em;margin-bottom:clamp(36px,7vh,80px)}
+.menu ol{list-style:none;padding:0;columns:2;column-gap:clamp(20px,5vw,80px);counter-reset:m}
+.menu li{counter-increment:m;break-inside:avoid;display:flex;gap:14px;align-items:baseline;padding:14px 0;border-top:1px solid var(--line);font-size:clamp(17px,2.2vw,26px);line-height:1.25}
+.menu li::before{content:counter(m,decimal-leading-zero);font-size:12px;color:var(--mute);letter-spacing:.08em;min-width:1.7em}
+@media(min-width:1000px){.menu ol{columns:3}}
+
+/* gallery */
+.gal{padding:clamp(60px,10vh,140px) var(--pad);max-width:1500px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(48px,9vh,110px)}
+.gal img{will-change:transform}
+.gal img{width:100%;height:auto}
+.gal figure:nth-child(1){width:68%}
+.gal figure:nth-child(2){width:84%;margin-left:auto}
+.gal figure:nth-child(3){width:52%}
+.gal figure:nth-child(4){width:74%;margin-left:auto}
+@media(min-width:900px){
+ .gal{display:grid;grid-template-columns:repeat(12,1fr);gap:0 2vw;align-items:start;padding-bottom:20vh}
+ .gal figure{width:auto!important;margin:0!important}
+ .gal figure:nth-child(1){grid-column:2/6}
+ .gal figure:nth-child(2){grid-column:7/13;margin-top:22vh!important}
+ .gal figure:nth-child(3){grid-column:1/6;margin-top:-4vh!important}
+ .gal figure:nth-child(4){grid-column:8/12;margin-top:10vh!important}
+}
+
+/* visit */
+.visit{padding:clamp(90px,16vh,200px) var(--pad) clamp(60px,10vh,120px);max-width:1400px;margin:0 auto;border-top:1px solid var(--line)}
+.visit h2{font-size:clamp(56px,11vw,150px);margin-bottom:clamp(30px,6vh,70px)}
+.vg{display:grid;gap:36px 6vw;grid-template-columns:1fr}
+@media(min-width:800px){.vg{grid-template-columns:1fr 1fr}}
+.vg h3{font:500 13px/1 Man,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:12px}
+.vg p{font-size:clamp(19px,2.2vw,26px);line-height:1.35}
+.vg small{display:block;color:var(--mute);font-size:15px;margin-top:6px}
+.now{display:inline-flex;align-items:center;gap:10px;margin-top:10px;font-size:15px;color:var(--mute)}
+.now::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--mute)}
+.now.on{color:var(--ink)}.now.on::before{background:var(--ember);box-shadow:0 0 12px var(--ember)}
+.acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(36px,6vh,64px)}
+.feat{margin-top:36px;color:var(--mute);font-size:15px}
+footer{padding:28px var(--pad) calc(28px + env(safe-area-inset-bottom,0px));display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);color:var(--mute);font-size:14px}
+
+@media(prefers-reduced-motion:reduce){
+ .js .rv{opacity:1;transform:none;transition:none}
+ .mark,.btn{transition:none}
+}
+</style>
+</head>
+<body>
+<header class="hd" id="hd">
+ <a class="mark d" href="#top" aria-label="Бахчай, наверх">Бахчай</a>
+ <a class="btn" href="https://wa.me/996771000771?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%BB%20%D0%B2%20%C2%AB%D0%91%D0%B0%D1%85%D1%87%D0%B0%D0%B9%C2%BB" rel="noopener">Забронировать</a>
+</header>
+
+<main id="top">
+<section class="hero" id="hero">
+ <div class="st">
+  <div class="bg" id="hbg"><picture>
+   <source media="(max-width:700px)" srcset="img/hero-m.webp">
+   <img src="img/hero.webp" width="2000" height="1333" alt="Полумрак зала ресто-бара: тёплые подвесные лампы над столами" fetchpriority="high">
+  </picture></div>
+  <div class="shade"></div>
+  <h1 class="d" id="ht">Бах<br>чай<span class="sr"> — ресто-бар в Бишкеке</span></h1>
+  <p class="meta"><span>Ресто-бар · Бишкек · каждый день до 03:00</span><span>4,7 по отзывам 2ГИС · 6857 оценок</span></p>
+ </div>
+</section>
+
+<section class="man">
+ <p class="rv">Открыто до <span class="d">трёх ночи</span> <b>—</b> каждый день. Большое меню: от шашлыка до самсы и лагмана. Средний чек — <span class="d">450 сом</span>.</p>
+</section>
+
+<section class="scene" id="scene" aria-label="Бахчай по сценам">
+ <div class="st">
+  <h2>Что вас ждёт</h2>
+  <div class="track" id="track" tabindex="0" aria-label="Карточки: Гриль, Кухня, Бар, Вечер, Зал">
+   <article class="card"><div class="im"><img src="img/grill.webp" width="1200" height="800" alt="Шашлык на шампурах над углями" loading="lazy"></div><div class="tx"><span class="n">01</span><h3 class="d">Гриль</h3><p>Шашлык, люля-кебаб, крылышки. Жар углей и дым.</p></div></article>
+   <article class="card"><div class="im"><img src="img/kitchen.webp" width="1000" height="667" alt="Плов с мясом на узорной тарелке" loading="lazy"></div><div class="tx"><span class="n">02</span><h3 class="d">Кухня</h3><p>Лагман, манты, самса, хинкали, хачапури — двадцать разделов меню.</p></div></article>
+   <article class="card"><div class="im"><img src="img/g-cocktail.webp" width="900" height="1125" alt="Коктейль с дымом на барной стойке" loading="lazy"></div><div class="tx"><span class="n">03</span><h3 class="d">Бар</h3><p>Винная карта, кальян, особые коктейли на вечера с событиями.</p></div></article>
+   <article class="card"><div class="im"><img src="img/evening.webp" width="900" height="1350" alt="Накрытый стол в вечерних огнях гирлянд" loading="lazy"></div><div class="tx"><span class="n">04</span><h3 class="d">Вечер</h3><p>Живая музыка, диджеи, футбольные трансляции. Открыты до 03:00.</p></div></article>
+   <article class="card"><div class="im"><img src="img/g-interior.webp" width="1200" height="800" alt="Тёплый зал с резными деревянными панелями и светильником" loading="lazy"></div><div class="tx"><span class="n">05</span><h3 class="d">Зал</h3><p>Тёплое дерево, кованые перила, гирлянды и зелёная стена.</p></div></article>
+  </div>
+  <p class="hint">Листайте карточки вбок →</p>
+  <div class="bar" aria-hidden="true"><i id="bar"></i></div>
+ </div>
+</section>
+
+<section class="menu" id="menu">
+ <h2 class="d rv">Меню</h2>
+ <p class="lead rv d1">Двадцать разделов на любой вкус. Полное меню и цены — по телефону или в WhatsApp.</p>
+ <ol class="rv d2">
+  <li>Шашлык</li><li>Люля-кебаб</li><li>Самса</li><li>Хачапури</li><li>Лагман</li><li>Манты</li><li>Пельмени</li>
+  <li>Хинкали</li><li>Чебуреки</li><li>Пирожки</li><li>Салаты</li><li>Супы</li><li>Сэндвичи</li><li>Шаурма</li>
+  <li>Суши</li><li>Том-ям</li><li>Картофель фри</li><li>Крылышки</li><li>Наггетсы</li><li>Сырные палочки</li>
+ </ol>
+</section>
+
+<section class="gal" aria-label="Фотографии">
+ <figure class="rv" data-s=".08"><img src="img/terrace.webp" width="800" height="1200" alt="Вечерний двор с гирляндами и накрытыми столами" loading="lazy"></figure>
+ <figure class="rv" data-s="-.06"><img src="img/g-skewers.webp" width="1200" height="800" alt="Мясо на шампурах на мангале" loading="lazy"></figure>
+ <figure class="rv" data-s=".1"><img src="img/tea.webp" width="1200" height="800" alt="Чёрный чугунный чайник и огни боке" loading="lazy"></figure>
+ <figure class="rv" data-s="-.09"><img src="img/g-plov.webp" width="800" height="1067" alt="Плов с мясом и овощами на тарелке" loading="lazy"></figure>
+</section>
+
+<section class="visit" id="visit">
+ <h2 class="d rv">Ждём вас</h2>
+ <div class="vg rv d1">
+  <div><h3>Адрес</h3><p>Бишкек, ул. Туголбай Ата, 30/1</p><small>Пересечение Шопокова и Туголбай Ата, ориентир — Ак-Эммир</small></div>
+  <div><h3>Часы работы</h3><p>Каждый день, 10:00–03:00</p><span class="now" id="now">Открыто ежедневно до 03:00</span></div>
+  <div><h3>Телефон</h3><p><a href="tel:+996770005975">+996 770 005 975</a></p></div>
+  <div><h3>WhatsApp</h3><p><a href="https://wa.me/996771000771" rel="noopener">+996 771 000 771</a></p></div>
+ </div>
+ <div class="acts rv d2">
+  <a class="btn" href="https://wa.me/996771000771?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%BB%20%D0%B2%20%C2%AB%D0%91%D0%B0%D1%85%D1%87%D0%B0%D0%B9%C2%BB" rel="noopener">Написать в WhatsApp</a>
+  <a class="btn ghost" href="tel:+996770005975">Позвонить</a>
+  <a class="btn ghost" href="https://2gis.kg/bishkek/firm/70000001025917921" rel="noopener">Маршрут в 2ГИС</a>
+  <a class="btn ghost" href="https://instagram.com/bahchai_resto" rel="noopener">Instagram</a>
+ </div>
+ <p class="feat rv">Навынос и доставка · кальян · живая музыка · Wi-Fi · детское меню · винная карта</p>
+</section>
+</main>
+
+<footer><span>Демо-страница</span><span>© Бахчай</span></footer>
+
+<script>
+document.documentElement.classList.add('js');
+const $=s=>document.querySelector(s),clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+// Open-now, Bishkek UTC+6, hours 10:00-03:00 cross midnight
+(function(){const d=new Date(Date.now()+6*3600e3),h=d.getUTCHours()+d.getUTCMinutes()/60,el=$('#now'),open=h>=10||h<3;
+ el.classList.toggle('on',open);el.textContent=open?'Сейчас открыто · до 03:00':'Сейчас закрыто · откроемся в 10:00'})();
+// Reveals
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+if(!reduced){
+ const hd=$('#hd'),hero=$('#hero'),ht=$('#ht'),hbg=$('#hbg'),gal=[...document.querySelectorAll('.gal figure')];
+ const scene=$('#scene'),track=$('#track'),bar=$('#bar'),cards=[...track.children];
+ const mq=matchMedia('(min-width:900px)');let last=scrollY,pin=false,span=0;
+ function layout(){pin=mq.matches;if(pin){span=track.scrollWidth-innerWidth;scene.style.height=(innerHeight+span)+'px'}else{scene.style.height='';track.style.transform='';cards.forEach(c=>{c.querySelector('.im').style.clipPath='';c.querySelector('img').style.transform=''})}}
+ function frame(){
+  const y=scrollY,vh=innerHeight,vw=innerWidth;
+  hd.classList.toggle('hide',y>80&&y>last);if(y<80||y<last)hd.classList.remove('hide');last=y;
+  const p=clamp(y/(hero.offsetHeight-vh));
+  ht.style.transform='translate3d(0,'+(-p*22)+'svh,0)';ht.style.filter='blur('+(p*16).toFixed(1)+'px)';ht.style.opacity=clamp(1-p*1.35);
+  hbg.style.transform='translate3d(0,'+(p*8)+'%,0) scale('+(1+p*.08)+')';
+  if(pin){const r=scene.getBoundingClientRect(),q=clamp(-r.top/span);
+   track.style.transform='translate3d('+(-q*span)+'px,0,0)';bar.style.transform='scaleX('+q+')';
+   cards.forEach(c=>{const l=c.getBoundingClientRect().left/vw,t=clamp((1-l)/.55);
+    c.querySelector('.im').style.clipPath='inset(0 '+((1-t)*100)+'% 0 0)';
+    c.querySelector('img').style.transform='translate3d('+clamp((l-.4)*-5,-3.5,3.5)+'vw,0,0)'})}
+  const k=vw<700?.5:1;gal.forEach(f=>{const r=f.getBoundingClientRect();f.firstElementChild.style.transform='translate3d(0,'+((r.top+r.height/2-vh/2)*f.dataset.s*k).toFixed(1)+'px,0)'});
+ }
+ let tk=false;const req=()=>{if(!tk){tk=true;requestAnimationFrame(()=>{tk=false;frame()})}};
+ addEventListener('scroll',req,{passive:true});addEventListener('resize',()=>{layout();req()});mq.addEventListener('change',()=>{layout();req()});
+ addEventListener('load',()=>{layout();frame()});layout();frame();
+}
+</script>
+</body>
+</html>
